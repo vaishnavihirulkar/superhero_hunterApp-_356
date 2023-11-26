@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input:focus, button:focus, a{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    font-family: 'Segoe UI',Tahoma,Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background-color: white;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+/*     Header    */
+#basic-info-container{
+    width: 100vw;
+    height: 500px;
+    background-color: rgb(208, 131, 131);
+    display: flex;
+}
+
+.details{
+    width: 60%;
+    background-color: rgb(199, 134, 134);
+    clip-path: polygon(0 0,0 100%,100% 100%,90% 0);
+    position: relative;
+    left: 6%;
+    padding: 100px 0;
+}
+
+.details>h1{
+    width: 80%;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.details>p{
+    width: 80%;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+
+.fav-btn-container{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    padding: 18px 20px;
+    border-radius: 20px 20px 20px 0px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.fav-btn-container i{
+    font-size: 1.5rem;
+    color:  rgb(0, 255, 51);
+    margin-left: 5px;
+}
+
+
+.image{
+    width: 40%;
+    height: 100%;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*        Section       */
+.outer-container{
+    width: 100vw; 
+    margin: auto;
+    padding: 20px 40px 0px 40px;
+}
+
+.outer-container>h1{
+    font-size: 3rem;
+    border-left: 4px solid rgb(146, 130, 130);
+    margin-bottom: 40px;
+}
+
+.inner-container{
+    width: 100%;
+    display: flex;  
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 30px;
+}
+
+.card{
+    width: fit-content;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card>.card-image{
+    width: 300px;
+    height: 430px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-image>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}       
+
+
+.card>.card-title{
+    height: 50px;
+}
+
+.card-title>h3{
+    width: 300px;
+    font-size: 1.3rem;
+    padding: 20px 3px;
+}
+
+.see-more{
+    text-align: right;
+    float: right;
+    font-size: 1rem;
+    padding-top: 40px;
+}
+
+
+/* To hide scroll  bar */
+.inner-container{
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+.inner-container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+
+@media screen and (max-width:1000px){
+    .details>h1{
+        font-size: 2rem;
+    }
+    
+    .details>p{
+        font-size: 1rem;
+    }
+    
+    .outer-container>h1{
+        font-size: 2rem;
+    }
+    
+    .inner-container{
+        gap: 10px;
+    }
+
+    .card{
+        height: 400px;
+        width: 230px;
+    }
+    
+    .card>.card-image{
+        width: 220px;
+        height: 300px;
+    }
+
+    .card-title>h3{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width:600px){
+    #basic-info-container{
+        height: 550px;
+    }
+
+    .outer-container{
+        padding: 15px 10px;
+    }
+
+    .details{
+        padding: 30px 0px 0px 0px;
+        width: 50%;
+    }
+
+    .image{
+        width: 50%;
+    }
+
+    .details>h1, .details>p{
+        width: 90%;
+    }
+
+
+    .see-more{
+        padding-top: 20px;
+    }
+
+    .fav-btn-container{
+        width: 50px;
+        height: 40px;
+        padding: 8px 10px;
+        border-radius: 10px 10px 10px 0px;
+        bottom: 10px;
+    }
+
+    .fav-btn-container i{
+        font-size: 1.2rem;
+    }
+}
